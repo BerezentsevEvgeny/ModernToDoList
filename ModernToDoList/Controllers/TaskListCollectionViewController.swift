@@ -15,14 +15,15 @@ class TaskListCollectionViewController: UICollectionViewController {
     
     private var dataSource: UICollectionViewDiffableDataSource<Sections,TaskList>!
     var lists: [TaskList] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        lists = DataManager.shared.taskLists
+        lists = TaskList.getTaskLists()
         title = "ToDoLists"
         createLayout()
         createDataSource()
         createSnapshot()
+        navigationItem.leftBarButtonItem = editButtonItem
         navigationItem.rightBarButtonItem = .some(UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewList)))
     }
     
@@ -43,6 +44,10 @@ class TaskListCollectionViewController: UICollectionViewController {
             content.text = taskList.name
             content.image = UIImage(systemName: "list.number")
             cell.contentConfiguration = content
+            let options = UICellAccessory.ReorderOptions(isHidden: false, reservedLayoutWidth: .actual, tintColor: .black, showsVerticalSeparator: true)
+            cell.accessories = [.reorder(displayed: .whenEditing, options: options)]
+
+            
         }
         
         dataSource = UICollectionViewDiffableDataSource<Sections,TaskList>(collectionView: collectionView, cellProvider: { collectionView, indexPath, taskList in
@@ -62,6 +67,8 @@ class TaskListCollectionViewController: UICollectionViewController {
         snapshot.appendItems(lists)
         dataSource.apply(snapshot)
     }
+    
+    
     
 }
 
