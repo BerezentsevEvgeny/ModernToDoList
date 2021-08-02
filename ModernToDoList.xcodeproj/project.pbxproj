@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6304D94126B7D61900DE38BB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304D94026B7D61900DE38BB /* DataManager.swift */; };
+		6351EB0726B6A56B00A330E2 /* TaskListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351EB0626B6A56B00A330E2 /* TaskListCollectionViewController.swift */; };
 		639C478726B670C4001C6230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C478626B670C4001C6230 /* AppDelegate.swift */; };
 		639C478926B670C4001C6230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C478826B670C4001C6230 /* SceneDelegate.swift */; };
-		639C478B26B670C4001C6230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C478A26B670C4001C6230 /* ViewController.swift */; };
 		639C478E26B670C4001C6230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639C478C26B670C4001C6230 /* Main.storyboard */; };
 		639C479026B670C7001C6230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639C478F26B670C7001C6230 /* Assets.xcassets */; };
 		639C479326B670C7001C6230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639C479126B670C7001C6230 /* LaunchScreen.storyboard */; };
+		639C479F26B67203001C6230 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639C479E26B67203001C6230 /* TaskList.swift */; };
+		639DCB3526B6FD7600DBECAC /* TaskCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DCB3426B6FD7600DBECAC /* TaskCollectionViewController.swift */; };
+		63A34E0626B7E82A00683ECB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A34E0526B7E82A00683ECB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6304D94026B7D61900DE38BB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6351EB0626B6A56B00A330E2 /* TaskListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCollectionViewController.swift; sourceTree = "<group>"; };
 		639C478326B670C4001C6230 /* ModernToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModernToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C478626B670C4001C6230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639C478826B670C4001C6230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		639C478A26B670C4001C6230 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		639C478D26B670C4001C6230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		639C478F26B670C7001C6230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		639C479226B670C7001C6230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639C479426B670C7001C6230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639C479E26B67203001C6230 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		639DCB3426B6FD7600DBECAC /* TaskCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewController.swift; sourceTree = "<group>"; };
+		63A34E0526B7E82A00683ECB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		639C478526B670C4001C6230 /* ModernToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				639C478626B670C4001C6230 /* AppDelegate.swift */,
-				639C478826B670C4001C6230 /* SceneDelegate.swift */,
-				639C478A26B670C4001C6230 /* ViewController.swift */,
-				639C478C26B670C4001C6230 /* Main.storyboard */,
-				639C478F26B670C7001C6230 /* Assets.xcassets */,
-				639C479126B670C7001C6230 /* LaunchScreen.storyboard */,
-				639C479426B670C7001C6230 /* Info.plist */,
+				639C479D26B671E0001C6230 /* Models */,
+				639C479B26B67187001C6230 /* Storyboards */,
+				639C479C26B67196001C6230 /* Controllers */,
+				63A34E0126B7E70400683ECB /* Managers */,
+				63A34E0426B7E80D00683ECB /* Extensions */,
+				639C479A26B67112001C6230 /* Supporting */,
 			);
 			path = ModernToDoList;
+			sourceTree = "<group>";
+		};
+		639C479A26B67112001C6230 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				639C478F26B670C7001C6230 /* Assets.xcassets */,
+				639C478626B670C4001C6230 /* AppDelegate.swift */,
+				639C478826B670C4001C6230 /* SceneDelegate.swift */,
+				639C479426B670C7001C6230 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		639C479B26B67187001C6230 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				639C478C26B670C4001C6230 /* Main.storyboard */,
+				639C479126B670C7001C6230 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		639C479C26B67196001C6230 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6351EB0626B6A56B00A330E2 /* TaskListCollectionViewController.swift */,
+				639DCB3426B6FD7600DBECAC /* TaskCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		639C479D26B671E0001C6230 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				639C479E26B67203001C6230 /* TaskList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63A34E0126B7E70400683ECB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6304D94026B7D61900DE38BB /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		63A34E0426B7E80D00683ECB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63A34E0526B7E82A00683ECB /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639C478B26B670C4001C6230 /* ViewController.swift in Sources */,
+				639C479F26B67203001C6230 /* TaskList.swift in Sources */,
+				6304D94126B7D61900DE38BB /* DataManager.swift in Sources */,
 				639C478726B670C4001C6230 /* AppDelegate.swift in Sources */,
 				639C478926B670C4001C6230 /* SceneDelegate.swift in Sources */,
+				639DCB3526B6FD7600DBECAC /* TaskCollectionViewController.swift in Sources */,
+				6351EB0726B6A56B00A330E2 /* TaskListCollectionViewController.swift in Sources */,
+				63A34E0626B7E82A00683ECB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F824GPAVR5;
-				INFOPLIST_FILE = ModernToDoList/Info.plist;
+				INFOPLIST_FILE = ModernToDoList/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.berezentsev.ModernToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F824GPAVR5;
-				INFOPLIST_FILE = ModernToDoList/Info.plist;
+				INFOPLIST_FILE = ModernToDoList/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.berezentsev.ModernToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
