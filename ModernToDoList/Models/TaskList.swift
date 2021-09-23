@@ -8,13 +8,15 @@
 import Foundation
 
 struct TaskList: Hashable {
-    let name: String
+    let idetifier = UUID()
+    var name: String
     var tasks: [Task]?
     
 }
 
 struct Task: Hashable {
-    let name: String
+    let id = UUID()
+    var name: String
     var isDone: Bool
 }
 

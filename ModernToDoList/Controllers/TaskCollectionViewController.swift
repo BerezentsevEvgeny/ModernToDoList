@@ -19,7 +19,6 @@ class TaskCollectionViewController: UICollectionViewController {
         createDataSource()
         createSnapshot()
         navigationItem.rightBarButtonItem = .some(UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTask)))
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -29,6 +28,9 @@ class TaskCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        guard var item = dataSource.itemIdentifier(for: indexPath) else { return }
+        item.isDone.toggle()
+        createSnapshot()
     }
 
     // MARK: UICollectionViewDataSource
